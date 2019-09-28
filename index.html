@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+		<title>levalleux-ludo.github.io</title>
+		<style>
+ul, #myUL {
+  list-style-type: none;
+}
+
+#myUL {
+  margin: 0;
+  padding: 0;
+}
+
+.caret {
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+}
+
+.caret::before {
+  content: "\25B6";
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.caret-down::before {
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Safari */'
+  transform: rotate(90deg);  
+}
+
+.nested {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+		</style>
+	</head>
+	<body>
+		<h1>Welcome to my Github web pages !</h1>
+
+		<p>Hereafter are links to my published projects (Front-end only).</p>
+
+		<ul id="myUL">
+			<li>
+				<span class="caret">My Projects</span>
+				<ul class="nested">
+					<li>
+
+						<span class="caret">
+							<span>
+								<img src="https://decentraland.org/images/logo.svg" alt="Decentraland logo" width="24"/>
+							</span>Decentraland</span>
+						<ul class="nested">
+							<li>
+								<a href="./DCL/Test1x1/index.html" target="_blank">Test1x1</a>
+								<span>just a test of dcl export</span>
+							</li>
+							<li>
+								<a href="./DCL/Test2x2/index.html" target="_blank">Test2x2</a>
+								<span>just another test of dcl export</span>
+							</li>
+							<li>
+								<a href="./DCL/JamminLand/index.html" target="_blank">Jammin'Land</a>
+								<span>an interactive scene developped for <a href="https://gamejam.decentraland.org" target="_blank">Decentraland Game Jam</a>
+								</span>
+							</li>
+						</ul>
+					</li>  
+				</ul>
+			</li>
+		</ul>
+
+		<script>
+var toggler = document.getElementsByClassName("caret");
+var i;
+
+for (i = 0; i < toggler.length; i++) {
+  toggler[i].addEventListener("click", function() {
+    this.parentElement.querySelector(".nested").classList.toggle("active");
+    this.classList.toggle("caret-down");
+  });
+}
+				</script>
+
+			</body>
+		</html>
+		
