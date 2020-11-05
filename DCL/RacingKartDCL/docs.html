@@ -1,0 +1,682 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>Racing Kart DCL</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Calibri Light";
+	panose-1:2 15 3 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Segoe UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h1
+	{mso-style-link:"Heading 1 Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:107%;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#2F5496;
+	font-weight:normal;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-top:2.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:107%;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#2F5496;
+	font-weight:normal;}
+h3
+	{mso-style-link:"Heading 3 Char";
+	margin-top:2.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:107%;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#1F3763;
+	font-weight:normal;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Header Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Footer Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	font-size:9.0pt;
+	font-family:"Calibri",sans-serif;
+	color:#44546A;
+	font-style:italic;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"Title Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:28.0pt;
+	font-family:"Calibri Light",sans-serif;
+	letter-spacing:-.5pt;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-link:"Title Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:28.0pt;
+	font-family:"Calibri Light",sans-serif;
+	letter-spacing:-.5pt;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-link:"Title Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:28.0pt;
+	font-family:"Calibri Light",sans-serif;
+	letter-spacing:-.5pt;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-link:"Title Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:28.0pt;
+	font-family:"Calibri Light",sans-serif;
+	letter-spacing:-.5pt;}
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+	{mso-style-link:"Subtitle Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	color:#5A5A5A;
+	letter-spacing:.75pt;}
+a:link, span.MsoHyperlink
+	{color:#0563C1;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-link:"Balloon Text Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:9.0pt;
+	font-family:"Segoe UI",sans-serif;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:36.0pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:36.0pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+span.MsoSubtleEmphasis
+	{color:#404040;
+	font-style:italic;}
+span.HeaderChar
+	{mso-style-name:"Header Char";
+	mso-style-link:Header;}
+span.FooterChar
+	{mso-style-name:"Footer Char";
+	mso-style-link:Footer;}
+span.TitleChar
+	{mso-style-name:"Title Char";
+	mso-style-link:Title;
+	font-family:"Calibri Light",sans-serif;
+	letter-spacing:-.5pt;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-link:"Heading 1";
+	font-family:"Calibri Light",sans-serif;
+	color:#2F5496;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Calibri Light",sans-serif;
+	color:#2F5496;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-link:"Heading 3";
+	font-family:"Calibri Light",sans-serif;
+	color:#1F3763;}
+span.SubtitleChar
+	{mso-style-name:"Subtitle Char";
+	mso-style-link:Subtitle;
+	font-family:"Times New Roman",serif;
+	color:#5A5A5A;
+	letter-spacing:.75pt;}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-link:"Balloon Text";
+	font-family:"Segoe UI",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 70.85pt 70.85pt 35.45pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=FR link="#0563C1" vlink="#954F72">
+
+<div class=WordSection1>
+
+<p class=MsoSubtitle align=center style='text-align:center'><span lang=EN-US
+style='font-size:16.0pt;line-height:107%'>Project for Decentraland</span></p>
+
+<p class=MsoTitle align=center style='text-align:center'><span lang=EN-US>Kart
+Simulation / Racing Game</span></p>
+
+<p class=MsoSubtitle align=center style='text-align:center'><span lang=EN-US
+style='font-size:16.0pt;line-height:107%'>Preliminary analysis and concepts</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+
+<h1><span lang=EN-US>The scene : a 3D track model</span></h1>
+
+<p class=MsoNormal><span lang=EN-US>Minimum recommended land size: 2x2 parcels
+(32mx32m), because a smaller size would prevent to have a longer track, and may
+have too small geometry limits (polygons, textures, altitude, …).</span></p>
+
+<p class=MsoNormal><span lang=EN-US>A greater land (2x3, 4x4, or more) would be
+even better of course.</span></p>
+
+<p class=MsoNormal><img width=280 height=165 id="Picture 1"
+src="docs_files/image001.jpg"
+alt="Polar Raceway Rezzer - full sim size racetrack - low prim race track - snowy theme race track - easy setup - racing"></p>
+
+<p class=MsoNormal><span lang=EN-US>Multi-floor track design would allow to get
+a longer track on a limited number of parcels. I estimate a track laid on a 2x2
+land (4 parcels) would be about 250m in length (3m/4m width), that’s consistent
+with the smallest indoor karting tracks in real world.</span></p>
+
+<p class=MsoNormal><img width=266 height=189 id="Picture 6"
+src="docs_files/image002.jpg"> <img width=272 height=204 id="Picture 250"
+src="docs_files/image003.jpg"></p>
+
+<span lang=EN-US style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:16.0pt;line-height:107%;
+font-family:"Calibri Light",sans-serif;color:#2F5496'>&nbsp;</span></p>
+
+<h1><span lang=EN-US>The Kart:</span></h1>
+
+<p class=MsoNormal><span lang=EN-US>One kart 3D model, build for the character
+to get inside (jump into).</span></p>
+
+<p class=MsoNormal style='page-break-after:avoid'><img width=302 height=174
+id="Picture 8" src="docs_files/image004.jpg"> <img width=264 height=178
+id="Picture 10" src="docs_files/image005.jpg"></p>
+
+<p class=MsoCaption><span lang=EN-US>a very basic draft of a kart model (just
+for illustration, dimensions : 1.0x0.6x0.3)</span></p>
+
+<p class=MsoNormal><span lang=EN-US>When added to the scene the kart model
+comes with invisible structure (colliders) designed to stuck the pilot inside. </span></p>
+
+<p class=MsoNormal><img width=376 height=338 id="Picture 9"
+src="docs_files/image006.jpg"></p>
+
+<p class=MsoCaption><span lang=EN-US>Example of colliders in the kart model</span></p>
+
+<p class=MsoNormal><span lang=EN-US>To get on the kart, the player can go from
+behind, climb up the ramp, then he’s falling inside the driving area. When mounted
+in the kart, the character is stuck (by colliders).</span></p>
+
+<p class=MsoNormal><span lang=EN-US>He can still get out the karting by
+jumping, or we could imagine the colliders to appear/disappear or
+increase/decrease according to the game events, in order to allow/deny the
+character to get on/off the kart.</span></p>
+
+<span lang=EN-US style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:16.0pt;line-height:107%;
+font-family:"Calibri Light",sans-serif;color:#2F5496'>&nbsp;</span></p>
+
+<h1><span lang=EN-US>The Driving Experience:</span></h1>
+
+<h2><span lang=EN-US>User Control:</span></h2>
+
+<p class=MsoNormal><span lang=EN-US>Let’s imagine how to drive a vehicle (the
+kart) with the user controls the Decentraland SDK actually proposes.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Ideally for driving a vehicle, we would
+need a 2-axis control (1 axis for steering, 1 axis for acceleration/brake),
+preferably “linear” (not an on/off), at least for steering axis.</span></p>
+
+<p class=MsoNormal>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=218 height=0></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=151 height=160 src="docs_files/image007.png"></td>
+ </tr>
+</table>
+
+<br clear=ALL>
+<span style='position:relative;z-index:250924032'><span style='position:absolute;
+left:222px;top:-2px;width:137px;height:136px'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=0 height=0></td>
+  <td width=60></td>
+  <td width=17></td>
+  <td width=1></td>
+  <td width=59></td>
+ </tr>
+ <tr>
+  <td height=57></td>
+  <td></td>
+  <td align=left valign=top><img width=17 height=57
+  src="docs_files/image008.png"></td>
+ </tr>
+ <tr>
+  <td height=1></td>
+ </tr>
+ <tr>
+  <td height=19></td>
+  <td colspan=4 align=left valign=top><img width=137 height=19
+  src="docs_files/image009.png"></td>
+ </tr>
+ <tr>
+  <td height=2></td>
+ </tr>
+ <tr>
+  <td height=57></td>
+  <td></td>
+  <td colspan=2 align=left valign=top><img width=18 height=57
+  src="docs_files/image010.png"></td>
+ </tr>
+</table>
+
+</span></span><span lang=EN-US>&nbsp;</span></p>
+
+<br clear=ALL>
+
+<h3><span lang=EN-US>Keyboard:</span></h3>
+
+<p class=MsoNormal style='margin-left:70.8pt'><span lang=EN-US>From what I know
+there are 4 keys (arrows or WASD) used to move the player (camera position) and
+there are 2 additional keys (E,F) for custom commands.</span></p>
+
+<p class=MsoNormal style='margin-left:70.8pt'><span lang=EN-US>As the player is
+stuck, the directional arrows are useless. But I don’t know if there would be a
+way to reroute the key events in order to control moving of the kart instead of
+the camera …</span></p>
+
+<h3><span lang=EN-US>Camera:</span></h3>
+
+<p class=MsoNormal style='margin-left:70.8pt'><span lang=EN-US>Once the player
+is stuck in the karting, he can’t move anymore (key arrows has no effect) but
+he can still move his line of sight in 2 dimensions by moving the mouse pointer
+(that actually controls the camera orientation)</span></p>
+
+<p class=MsoNormal style='margin-left:70.8pt'><span lang=EN-US>Using camera has
+already been used in a scene to move objects (Decentrablocks, </span><a
+href="https://decentraland.org/blog/announcements/building-blocks/"><span
+lang=EN-US>https://decentraland.org/blog/announcements/building-blocks/</span></a><span
+lang=EN-US>). This is actually a way the user can control a 2 axis command,
+linearly, without struggling too much.</span></p>
+
+<p class=MsoNormal style='margin-left:70.8pt'><span lang=EN-US>So, I think that
+a similar principle could be used to control the movement of the kart itself. In
+the real world it would mean a driver would control his car direction and
+velocity by his sight. Looks great, indeed?</span></p>
+
+<p class=MsoNormal style='margin-left:70.8pt'><span lang=EN-US>At least, this
+could control the steering while acceleration and brakes can be controlled by E
+and F keys (in an on/off way).</span></p>
+
+<h3><span lang=EN-US>To go further:</span></h3>
+
+<p class=MsoNormal style='margin-left:70.8pt'><span lang=EN-US>Furthermore, we
+could imagine a game controller application on smartphone being connected to
+the Decentraland game. In that particular case, it would control the kart, but
+a similar technique could be useful for lots of different game concepts.</span></p>
+
+<p class=MsoNormal style='margin-left:70.8pt'><img border=0 width=261
+height=152 id="Picture 249" src="docs_files/image011.jpg"
+alt="Illustration of an ideal set up"></p>
+
+<p class=MsoNormal style='margin-left:70.8pt'><span lang=EN-US>Not only by
+using a virtual game pad on touch screen, but, much better, using the phone
+movements themselves, like the famous Wiimote: as for the Nintendo killer
+product, this would give DCL some amazing new user experiences (just imagine a
+tennis game, using our own smartphone as a racket).<br>
+See </span><a
+href="https://cord-cutters.gadgethacks.com/how-to/use-your-android-device-as-wiimote-style-controller-play-tennis-your-chromecast-0160917/"><span
+lang=EN-US>https://cord-cutters.gadgethacks.com/how-to/use-your-android-device-as-wiimote-style-controller-play-tennis-your-chromecast-0160917/</span></a><span
+lang=EN-US> for example.</span></p>
+
+<p class=MsoNormal style='margin-left:70.8pt'><span lang=EN-US>It seems that
+this project does something in that way: </span><a
+href="https://github.com/konaraddi/web-riimote"><span lang=EN-US>https://github.com/konaraddi/web-riimote</span></a></p>
+
+<h1><span lang=EN-US>The Driving Model:</span></h1>
+
+<p class=MsoNormal><span lang=EN-US>As a simulation game, the kart needs to
+respect some realistic behavior taking into account the physical laws (engine
+power, brakes power, inertia, centrifugal force, tire adherence), usage (tire
+wear), road conditions (temperature, materials, wetting, slopes) and their
+influence on trajectory, hence the velocity of the vehicle and the driver’s
+performance.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>However, the collision with the track’s
+limits shall be managed, in order to:</span></p>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt'><span
+lang=EN-US>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Prevent the player to drive outside the track</span></p>
+
+<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt'><span lang=EN-US>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Slow down / deviate the kart when colliding with
+the limits, regarding the angle, velocity, etc.</span></p>
+
+<h1><span lang=EN-US>Gameplay:</span></h1>
+
+<h2><span lang=EN-US>Time trial:</span></h2>
+
+<p class=MsoNormal><span lang=EN-US>The player tries to drive the fastest as
+possible, regarding the limits given by the driving model and regarding the
+road condition.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>A display (3D entity in the scene and/or UI
+indicator) gives him the time taken for his last laps, so that he has feedback
+and can improve his driving lap after lap.</span></p>
+
+<h2><span lang=EN-US>Racing:</span></h2>
+
+<p class=MsoNormal><span lang=EN-US>Driving alone on the track is a thing, but
+competing a race is a much better experience.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>So, we’ll put several karts driving on the
+track, either control by ‘IA’ (a basic model would fit IMHO), for sole-player,
+or (better choice) controlled by other players, using a multi-player feature as
+proposed in the SDK (message bus or dedicated server relay).</span></p>
+
+<p class=MsoNormal><span lang=EN-US>This mode of course requires to manage
+collision between karts.</span></p>
+
+<h2><span lang=EN-US>Scores</span></h2>
+
+<p class=MsoNormal><span lang=EN-US>The blockchain integration in DCL let us
+the opportunity to use Ethereum, for instance, to record the best scores of all
+players.</span></p>
+
+<h1><span lang=EN-US>Game Economy</span></h1>
+
+<p class=MsoNormal><span lang=EN-US>It’s a bit early to say but some
+opportunity can be pointed out.</span></p>
+
+<h2><span lang=EN-US>Track Builder</span></h2>
+
+<p class=MsoNormal><span lang=EN-US>Let the land owner build his own track from
+building-blocks. Such blocks could be bought/exchanged (in MANA) in the DCL
+marketplace (as fungible items).</span></p>
+
+<h2><span lang=EN-US>Kart rental</span></h2>
+
+<p class=MsoNormal><span lang=EN-US>Like in real life, you come on the track
+and you drive a kart that is rent to you from the land owner.</span></p>
+
+<h2><span lang=EN-US>Parts Store</span></h2>
+
+<p class=MsoNormal><span lang=EN-US>If the vehicle model simulates wear and
+tears of tires, brakes, and so on, then the kart itself need to be maintained
+regularly and some parts changed. They could be sold on the marketplace as
+well.</span></p>
+
+<h2><span lang=EN-US>BYOK</span></h2>
+
+<p class=MsoNormal><span lang=EN-US>Let each player to own his kart, as an NFT,
+make some specific designs (ads, eventually), tuning pieces for look and/or
+performances purpose (aerodynamics)</span></p>
+
+<p class=MsoNormal><span lang=EN-US>So, as if there are different tracks across
+DCL, built/owned by different land owners, the player can bring his own kart
+and race with it, like in real life.</span></p>
+
+<span lang=EN-US style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<h1><span lang=EN-US>Statement of Work (delivery schedule and content)</span></h1>
+
+<p class=MsoNormal><span lang=EN-US>Release v1, delivered on 15/02/2020 at the
+latest. </span></p>
+
+<p class=MsoNormal><span lang=EN-US>Incremental releases would be delivered
+before to show progress and get feedback ASAP.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Detailed content of the release v1:</span></p>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt'><span
+lang=EN-US>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>One track 3D model on a 2x2 or 2x3 LAND, based
+on segments (building blocks), allowing to create new tracks in future</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
+lang=EN-US>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>The scene also includes a display indicator to
+show the last laps time of each player.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
+lang=EN-US>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>4 kart 3D models</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
+lang=EN-US>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>The driving model:</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:72.0pt;text-indent:-18.0pt'><span
+lang=EN-US style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span lang=EN-US>User control based on camera movement plus E,F
+keys:</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt;text-indent:
+-18.0pt'><span lang=EN-US style='font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-US>Steering
+according to the camera orientation (Y axis)</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt;text-indent:
+-18.0pt'><span lang=EN-US style='font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-US>E
+key: accelerate</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt;text-indent:
+-18.0pt'><span lang=EN-US style='font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-US>F
+key: brake</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:72.0pt;text-indent:-18.0pt'><span
+lang=EN-US style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span lang=EN-US>Dynamics:</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt;text-indent:
+-18.0pt'><span lang=EN-US style='font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-US>Acceleration,</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt;text-indent:
+-18.0pt'><span lang=EN-US style='font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-US>Braking,</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt;text-indent:
+-18.0pt'><span lang=EN-US style='font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-US>Steering,</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt;text-indent:
+-18.0pt'><span lang=EN-US style='font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-US>Mass
+(effective in slopes),</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt;text-indent:
+-18.0pt'><span lang=EN-US style='font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-US>Collision
+with track limits,</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt;text-indent:
+-18.0pt'><span lang=EN-US style='font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-US>Centrifugal
+forces (inertias),</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt;text-indent:
+-18.0pt'><span lang=EN-US style='font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-US>Tire
+adherence limits: drift, trajectory impacts, spin/oversteer</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:72.0pt;text-indent:-18.0pt'><span
+lang=EN-US style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span lang=EN-US>Sound:</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt;text-indent:
+-18.0pt'><span lang=EN-US style='font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-US>Engine
+sound, modulated according to acceleration</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt;text-indent:
+-18.0pt'><span lang=EN-US style='font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-US>Tires
+sounds when drifting</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
+lang=EN-US>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Game-play:</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:72.0pt;text-indent:-18.0pt'><span
+lang=EN-US style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span lang=EN-US>The track includes a pick up/drop off area where
+the available karts are parked</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:72.0pt;text-indent:-18.0pt'><span
+lang=EN-US style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span lang=EN-US>The player can choose an available kart are get
+in it from the back</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:72.0pt;text-indent:-18.0pt'><span
+lang=EN-US style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span lang=EN-US>The other karts can be driven by other players
+(multi-player mode).</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:72.0pt;text-indent:-18.0pt'><span
+lang=EN-US style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span lang=EN-US>After each lap, the time of each player is shown
+on the track display indicator</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
+lang=EN-US>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Model limitations:</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:72.0pt;text-indent:-18.0pt'><span
+lang=EN-US style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span lang=EN-US>No suspension (as most real karts)</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:72.0pt;text-indent:-18.0pt'><span
+lang=EN-US style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span lang=EN-US>No gearbox (as basic karts)</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:72.0pt;text-indent:-18.0pt'><span
+lang=EN-US style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span lang=EN-US>No collision between karts</span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:72.0pt;text-indent:-18.0pt'><span
+lang=EN-US style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span lang=EN-US>Multiplayer features may suffer from latency (i.e.
+position of other players may have some delays)</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>
